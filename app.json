@@ -10,12 +10,12 @@
       "permissions": ["android.permission.CAMERA"]
     },
     "plugins": [
-      ["expo-camera", {
-        "cameraPermission": "plated. needs camera access to scan food barcodes."
-      }],
-      ["expo-barcode-scanner", {
-        "cameraPermission": "plated. needs camera access to scan food barcodes."
-      }]
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "plated. needs camera access to scan food barcodes."
+        }
+      ]
     ],
     "extra": {
       "eas": {

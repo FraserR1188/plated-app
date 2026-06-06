@@ -5,7 +5,6 @@ node_modules/
 .expo/
 dist/
 web-build/
-expo-env.d.ts
 
 # !! IMPORTANT — your Supabase keys live here, NEVER commit this
 .env
