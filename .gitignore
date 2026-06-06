@@ -1,0 +1,33 @@
+# Dependencies — never commit these, they're huge
+node_modules/
+
+# Expo generated files
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+
+# !! IMPORTANT — your Supabase keys live here, NEVER commit this
+.env
+.env.local
+.env.production
+
+# Build outputs
+android/
+ios/
+*.apk
+*.aab
+*.ipa
+
+# OS noise
+.DS_Store
+Thumbs.db
+
+# Editor settings
+.vscode/
+.idea/
+*.swp
+
+# Logs
+npm-debug.log*
+yarn-error.log*
