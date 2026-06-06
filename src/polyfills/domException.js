@@ -51,10 +51,10 @@ var ERROR_CODES = {
   DATA_CLONE_ERR: 25,
 };
 
-if (typeof globalThis.DOMException === 'undefined') {
+if (typeof globalThis.DOMException === "undefined") {
   function DOMExceptionPolyfill(message, name) {
-    var normalizedMessage = message === undefined ? '' : String(message);
-    var normalizedName = name === undefined ? 'Error' : String(name);
+    var normalizedMessage = message === undefined ? "" : String(message);
+    var normalizedName = name === undefined ? "Error" : String(name);
     var error = Error(normalizedMessage);
 
     this.message = normalizedMessage;
@@ -73,16 +73,20 @@ if (typeof globalThis.DOMException === 'undefined') {
 
     Object.defineProperty(DOMExceptionPolyfill, codeName, {
       enumerable: true,
+      configurable: true,
       value: ERROR_CODES[codeName],
+      writable: true,
     });
 
     Object.defineProperty(DOMExceptionPolyfill.prototype, codeName, {
       enumerable: true,
+      configurable: true,
       value: ERROR_CODES[codeName],
+      writable: true,
     });
   }
 
-  Object.defineProperty(globalThis, 'DOMException', {
+  Object.defineProperty(globalThis, "DOMException", {
     configurable: true,
     value: DOMExceptionPolyfill,
     writable: true,
